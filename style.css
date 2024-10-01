@@ -1,0 +1,136 @@
+html, body  {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  
+}
+
+.body {
+  display: flex;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.747);
+}
+
+.nav {
+  background-color: rgb(56, 56, 56);
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  height: 100vh;
+  width: 15%;  
+}
+
+.nav ul {
+  list-style: none;
+  margin-top: 9%;
+}
+
+.nav ul li {
+  padding: 20px;
+}
+
+.text  {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-direito ul, .header-esquerdo ul{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  list-style: none;
+}
+
+.header-direito ul li, .header-esquerdo ul li {
+  background-color: rgb(85, 84, 84);
+  padding: 7px;
+  border: 2px solid gray;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px rgb(97, 97, 97);
+  cursor: pointer;
+}
+
+.header-direito {
+  margin-right: 3%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin-top: 20px;
+  width: 80%;
+  align-items: center;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  max-height: auto;
+  overflow-y: auto;
+}
+
+.chat-bot {
+  padding-top: 20px;
+  align-items: flex-start;
+
+}
+
+.meu {
+  margin-top: 20px;
+  align-items: flex-end;
+  margin-left: auto;
+  background-color: rgb(83, 83, 83);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  background-color: black;
+  padding: 5px;
+  border-radius: 15px;
+  height: 40px;
+}
+
+.input input {
+  border: none;
+  flex: 0.90;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  outline: none;
+}
+
+.input input::placeholder {
+  color: white;
+}
+
+.input i {
+  background-color: rgba(0, 0, 0, 0.637);
+  color: white;
+  align-self: center;
+  cursor: pointer;
+}
+
+.icone {
+  width: 13px;
+  border: none;
+}
