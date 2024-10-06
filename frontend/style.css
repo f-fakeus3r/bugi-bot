@@ -2,6 +2,8 @@ html, body  {
   height: 100%;
   overflow: hidden;
   margin: 0;
+    font-family: 'San Francisco', sans-serif;
+
   
 }
 
@@ -81,39 +83,70 @@ html, body  {
 .chat {
   display: flex;
   flex-direction: column;
-  max-height: auto;
-  overflow-y: auto;
-  width: 100%; /* Ensure it uses the full width */
+  max-height: calc(100vh - 100px); /* Mantém a altura do chat ajustada */
+  overflow-y: auto; /* Permite rolagem */
+  width: 100%;
+  padding: 20px 0 80px; /* Adiciona espaço extra na parte inferior para evitar que o texto fique atrás da barra de entrada */
 }
+
 
 .chat-bot {
   margin-top: 10px; /* Space above the bot message */
   align-self: flex-start; /* Align bot messages to the left */
-  background-color: rgb(83, 83, 83);
+  /*background-color: rgb(43, 43, 43);*/
   padding: 15px;
-  border-radius: 15px;
-  max-width: 70%; /* Limit width for readability */
-  text-align: left; /* Align text to the left */
+  border-radius: 10px;
+  max-width: 50%; /* Limit width for readability, reduce from 70% */
+  text-align: justify; /* Align text to the left */
+  margin-left: 20%; /* Move closer to center */
+  margin-right: 40%
+}
+
+.chat-bot h3 {
+  font-size: 1em; /* Tamanho consistente com os demais elementos */
+  font-weight: bold; /* Negrito */
+  margin-bottom: 10px;
+  color: white; /* Cor branca para manter o contraste */
+  text-align: center;
+  border-bottom: 2px solid rgb(83, 83, 83); /* Linha abaixo do título para destaque */
+  padding-bottom: 5px;
+  /* Remover caps lock */
+  text-transform: none;
+  line-height: 1.6; /* Increase line height for better spacing */
+
 }
 
 .meu {
   margin-top: 10px; /* Space above the user message */
   align-self: flex-end; /* Align user messages to the right */
+  background-color: rgb(83, 83, 83);
   color: white; /* Text color */
   padding: 15px;
-  border-radius: 15px;
-  max-width: 70%; /* Limit width for readability */
-  text-align: right; /* Align text to the right */
+  border-radius: 10px;
+  max-width: 50%; /* Limit width for readability, reduce from 70% */
+  text-align: justify; /* Align text to the right */
+  margin-right: 20%; /* Move closer to center */
+  margin-left: 10%;
+  line-height: 1.6; /* Increase line height for better spacing */
+
 }
 
 .input {
-  display: flex;
-  justify-content: center;
-  width: 60%;
+  position: fixed; /* Fixa a caixa de entrada na parte inferior */
+  bottom: 0; /* Coloca a barra de entrada no fundo */
+  left: 50%; /* Move para o centro da tela */
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  width: 80%; /* Define uma largura fixa ou percentual */
+  max-width: 600px; /* Define uma largura máxima */
   background-color: black;
   padding: 5px;
   border-radius: 15px;
-  height: 40px;
+  height: 40px; /* Ajuste conforme necessário */
+  display: flex;
+  justify-content: center;
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+  margin-bottom: 20px; /* Adiciona espaço extra no fundo para permitir rolagem */
+  margin-top: 10px; /* Adiciona espaço extra no topo para evitar sobreposição */
 }
 
 .input input {
@@ -140,3 +173,59 @@ html, body  {
   width: 13px;
   border: none;
 }
+
+.option-button {
+  background-color: rgb(56, 56, 56); /* Botões mais escuros para um estilo moderno */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px 0; /* Mais espaçamento entre os botões */
+}
+
+.option-button:hover {
+  background-color: rgb(83, 83, 83); /* Efeito de hover sutil */
+  transform: scale(1.05); /* Efeito de crescimento no hover */
+}
+
+/* Estilização da barra de rolagem */
+.chat::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+}
+
+.chat::-webkit-scrollbar-thumb {
+  background-color: rgba(83, 83, 83, 0.8); /* Cor do botão da barra de rolagem */
+  border-radius: 10px; /* Bordas arredondadas para o botão */
+}
+
+.chat::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.5); /* Cor de fundo da pista */
+}
+
+/* Para Firefox */
+.chat {
+  scrollbar-width: thin; /* Para Firefox */
+  scrollbar-color: rgba(83, 83, 83, 0.8) rgba(0, 0, 0, 0.5); /* Cor do botão e da pista */
+}
+
+
+/*
+.option-button {
+  background-color: rgb(83, 83, 83); 
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.option-button:hover {
+  background-color: rgb(133, 133, 133);
+}*/

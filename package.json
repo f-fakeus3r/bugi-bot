@@ -10,7 +10,8 @@
   "main": "call-groq-ai.js",
   "scripts": {
     "test": "test",
-    "start": "node groq-ai/call-groq-ai.js"
+    "start": "node groq-ai/call-groq-ai.js",
+    "server": "node backend/server.js"
   },
   "author": "",
   "license": "ISC",
